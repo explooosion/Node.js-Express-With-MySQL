@@ -1,0 +1,97 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+/* index */
+
+.control,
+.search {
+    margin: 10px;
+}
+
+.search input[type='text'] {
+    height: 25px;
+    padding: 0 5px;
+}
+
+a {
+    padding: 5px 20px;
+    border: none;
+    background: #7DCD85;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #6BB072;
+}
+
+.table {
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: center;
+}
+
+.table tr {
+    height: 35px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tr th {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.table tr td {
+    padding: 0 10px;
+}
+
+
+/* useradd */
+
+.row {
+    width: 280px;
+    height: 30px;
+    margin: 5px;
+}
+
+.row label {
+    display: inline;
+    width: 80px;
+    font-size: 16px;
+}
+
+.row input[type='text'],
+.row input[type='password'] {
+    float: right;
+    height: 20px;
+    padding: 0 5px;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    border: none;
+    color: #FFFFFF;
+    background: #7DCD85;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: background .25s;
+    -moz-transition: background .25s;
+    -ms-transition: background .25s;
+    -o-transition: background .25s;
+    transition: background .25s;
+}
+
+.btn:hover {
+    background: #6BB072;
+}
+
+.msgerr {
+    margin: 5px;
+    color: #f00;
+    font-size: 12px;
+}

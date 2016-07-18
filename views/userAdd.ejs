@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title></title>
+    <script type="text/javascript">
+    function Check() {
+
+        var id = document.getElementsByName('userid')[0].value;
+        var pwd = document.getElementsByName('password')[0].value;
+        var mail = document.getElementsByName('email')[0].value;
+        if (id && pwd && mail) {
+            return true;
+        }
+        alert('please input the info.');
+        return false;
+
+    }
+    </script>
+</head>
+
+<body>
+    <form name="addform" action="userAdd" method="post" accept-charset="utf-8" onSubmit="return Check();">
+        <h1>Account - Add</h1>
+        <div class="row">
+            <label>userid：</label>
+            <input type="text" name="userid" placeholder="userid" />
+        </div>
+        <div class="row">
+            <label>password：</label>
+            <input type="password" name="password" placeholder="password">
+        </div>
+        <div class="row">
+            <label>email：</label>
+            <input type="text" name="email" placeholder="email">
+        </div>
+        <div class="row">
+            <input class="btn" type='submit' value='Submit'>
+            <input class="btn" type='reset' value='Reset'>
+            <input class="btn" type='button' value='Back' onclick="javascript: location.href='/'">
+            <label class="msgerr">
+                <%=msg %>
+            </label>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script>
+    function Edit(id) {
+        window.location.href = "/userEdit?id=" + id;
+    }
+
+    function Delete(id) {
+        var rs = confirm('Confirm to delete?');
+        if (rs) {
+            window.location.href = "/userDelete?id=" + id;
+        }
+    }
+
+    function Search() {
+
+        var userid = document.getElementsByName('suserid')[0].value;
+        window.location.href = "/?user=" + userid;;
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Account - List</h1>
+    <div class="search">
+        <label>UserId：</label>
+        <input type="text" name="suserid" value="<%=user  %>" placeholder="input the userid">
+        <input type="button" name="sSearch" value="Search" class="btn" onclick="Search();">
+    </div>
+    <div class="control">
+        <input class="btn" type='submit' value='Add' onclick="javascript: location.href='add'">
+    </div>
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>userid</th>
+            <th>password</th>
+            <th>email</th>
+            <th></th>
+        </tr>
+        <% for ( var i = 0 ; i < data.length ; i++){ %>
+            <tr>
+                <td>
+                    <%= data[i].id  %>
+                </td>
+                <td>
+                    <%= data[i].userid  %>
+                </td>
+                <td>
+                    <%= data[i].password  %>
+                </td>
+                <td>
+                    <%= data[i].email  %>
+                </td>
+                <td>
+                    <input type="button" name="edit" value="Edit" class="btn" onclick="Edit('<%= data[i].id  %>');" />
+                    <input type="button" name="delete" value="Delete" class="btn" onclick="Delete('<%= data[i].id  %>');" />
+                </td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html>
