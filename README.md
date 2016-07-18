@@ -2,7 +2,7 @@
 Thisis a demo for node.je Express (ejs) with mysql
 　
 　
-## Teach Blog
+## Blog
 [Node.js - MySQL](https://dotblogs.com.tw/explooosion/2016/07/18/010601)
 　
 　
