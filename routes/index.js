@@ -47,7 +47,7 @@ router.post('/userAdd', function(req, res, next) {
         }
 
         var count = rows.length;
-        if (count > 1) {
+        if (count > 0) {
 
             var msg = 'Userid already exists.';
             res.render('userAdd', { title: 'Add User', msg: msg });
